@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingScore = false
+    @State private var scoreTitle = ""
     @State private var scoreMessage = ""
     @State private var score = 0
     
@@ -70,21 +71,24 @@ struct ContentView: View {
             }
             .padding()
         }
-        .alert(scoreMessage, isPresented: $showingScore) {
+        .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
-            Text("Your score is \(score).")
+            Text(scoreMessage)
         }
     }
     
     private func flagTapped(_ number: Int) {
         if number == correctAnswer {
-            scoreMessage = "Correct"
+            scoreTitle = "Correct"
+            scoreMessage = "Good job!"
             score += 1
         } else {
-            scoreMessage = "Wrong"
+            scoreTitle = "Wrong"
+            scoreMessage = "That was the flag of \(countries[number])."
             score -= 1
         }
+        
         showingScore = true
     }
     
