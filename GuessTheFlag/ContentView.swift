@@ -42,8 +42,7 @@ struct ContentView: View {
                             .fontWeight(.semibold)
                         
                         Text(countries[correctAnswer])
-                            .font(.largeTitle)
-                            .fontWeight(.black)
+                            .largeBlueTitleFont()
                     }
                     
                     ForEach(0..<3) { number in

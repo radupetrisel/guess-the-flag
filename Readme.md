@@ -14,3 +14,5 @@ At the end of the guided tutorial, there are some challenges that are implemente
 These challenges come from different tutorials throughout the 100 days of the course.
 
 <b> Challenge from Project 3 (technique project)</b>: Go back to project 2 and replace the Image view used for flags with a new FlagImage() view that renders one flag image using the specific set of modifiers we had.
+
+<b> Challenge from Project 3 (technique project)</b>: Create a custom ViewModifier (and accompanying View extension) that makes a view have a large, blue font suitable for prominent titles in a view.
