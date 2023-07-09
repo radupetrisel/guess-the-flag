@@ -20,6 +20,7 @@ struct ContentView: View {
     @State private var showingGameOver = false
     
     @State private var flagRotationAngles = [0.0, 0.0, 0.0]
+    @State private var flagOpacities = [1.0, 1.0, 1.0]
     
     var body: some View {
         ZStack {
@@ -53,6 +54,7 @@ struct ContentView: View {
                         } label: {
                             FlagImage(flagName: countries[number])
                                 .rotation3DEffect(.degrees(flagRotationAngles[number]), axis: (x: 0, y: 1, z: 0))
+                                .opacity(flagOpacities[number])
                         }
                     }
                 }
@@ -88,6 +90,12 @@ struct ContentView: View {
     private func flagTapped(_ number: Int) {
         withAnimation {
             flagRotationAngles[number] = 360
+            
+            for i in flagOpacities.indices {
+                if i != number {
+                    flagOpacities[i] = 0.25
+                }
+            }
         }
         
         if number == correctAnswer {
@@ -115,6 +123,10 @@ struct ContentView: View {
         
         for i in flagRotationAngles.indices {
             flagRotationAngles[i] = 0
+        }
+        
+        for i in flagOpacities.indices {
+            flagOpacities[i] = 1.0
         }
     }
     

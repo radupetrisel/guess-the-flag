@@ -19,3 +19,5 @@ These challenges come from different tutorials throughout the 100 days of the co
 **Challenge from Project 3 (technique project)**: Create a custom ViewModifier (and accompanying View extension) that makes a view have a large, blue font suitable for prominent titles in a view.
 
 **Challenge from Project 6 (technique project)**: When you tap a flag, make it spin around 360 degrees on the Y axis.
+
+**Challenge from Project 6 (technique project)**: Make the other two buttons fade out to 25% opacity.
