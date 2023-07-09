@@ -21,6 +21,7 @@ struct ContentView: View {
     
     @State private var flagRotationAngles = [0.0, 0.0, 0.0]
     @State private var flagOpacities = [1.0, 1.0, 1.0]
+    @State private var flagScales = [1.0, 1.0, 1.0]
     
     var body: some View {
         ZStack {
@@ -55,6 +56,7 @@ struct ContentView: View {
                             FlagImage(flagName: countries[number])
                                 .rotation3DEffect(.degrees(flagRotationAngles[number]), axis: (x: 0, y: 1, z: 0))
                                 .opacity(flagOpacities[number])
+                                .scaleEffect(flagScales[number])
                         }
                     }
                 }
@@ -96,6 +98,12 @@ struct ContentView: View {
                     flagOpacities[i] = 0.25
                 }
             }
+            
+            for i in flagScales.indices {
+                if i != number {
+                    flagScales[i] = 0.2
+                }
+            }
         }
         
         if number == correctAnswer {
@@ -127,6 +135,10 @@ struct ContentView: View {
         
         for i in flagOpacities.indices {
             flagOpacities[i] = 1.0
+        }
+        
+        for i in flagOpacities.indices {
+            flagScales[i] = 1.0
         }
     }
     

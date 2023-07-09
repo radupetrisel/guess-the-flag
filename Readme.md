@@ -21,3 +21,5 @@ These challenges come from different tutorials throughout the 100 days of the co
 **Challenge from Project 6 (technique project)**: When you tap a flag, make it spin around 360 degrees on the Y axis.
 
 **Challenge from Project 6 (technique project)**: Make the other two buttons fade out to 25% opacity.
+
+**Challenge from Project 6 (technique project)**: Add a third effect of your choosing to the two flags the user didn’t choose – maybe make them scale down? Or flip in a different direction? Experiment!
