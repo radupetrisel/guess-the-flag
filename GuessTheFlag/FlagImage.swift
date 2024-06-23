@@ -18,8 +18,6 @@ struct FlagImage: View {
     }
 }
 
-struct FlagImage_Previews: PreviewProvider {
-    static var previews: some View {
-        FlagImage(flagName: "UK")
-    }
+#Preview {
+    FlagImage(flagName: "UK")
 }
